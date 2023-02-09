@@ -3,7 +3,6 @@ import { RenderModule } from 'nest-next';
 import Next from 'next';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-
 import { HttpModule } from '@nestjs/axios';
 
 @Module({
