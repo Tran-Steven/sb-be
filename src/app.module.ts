@@ -10,8 +10,7 @@ import { HttpModule } from '@nestjs/axios';
         as the argument to `forRootAsync` */
   imports: [
     HttpModule.register({
-      baseURL:
-        'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=${STOCK_KEY}',
+      baseURL: `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=${STOCK_KEY}`,
       params: {
         appid: process.env.STOCK_KEY,
       },
