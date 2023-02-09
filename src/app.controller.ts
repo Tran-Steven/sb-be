@@ -9,4 +9,9 @@ export class AppController {
   home() {
     return {};
   }
+
+  @Get()
+  getStockData() {
+    return this.appService.getStockData();
+  }
 }
