@@ -4,6 +4,8 @@ import Next from 'next';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { HttpModule } from '@nestjs/axios';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   /* should pass a NEXT.js server instance
@@ -21,6 +23,8 @@ import { HttpModule } from '@nestjs/axios';
         should look for pages in root dir */
       { viewsDir: null },
     ),
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
