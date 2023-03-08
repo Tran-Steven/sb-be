@@ -8,5 +8,6 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 @Module({
   imports: [HttpModule],
+  providers: [StockService],
 })
 export class AppModule {}

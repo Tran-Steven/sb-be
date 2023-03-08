@@ -1,8 +1,8 @@
 import { Controller, Get, Render } from '@nestjs/common';
 import { StockService } from './app.service';
 
-@Controller()
-export class AppController {
+@Controller(`stock`)
+export class StockController {
   constructor(private readonly appService: StockService) {}
   @Get()
   @Render('index')
