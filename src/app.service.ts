@@ -16,10 +16,7 @@ export class StockService {
   constructor(private readonly httpService: HttpService) {}
   async getStockData() {
     const date = new Date();
-    if (ticker == '') {
-      setRandTicker();
-    }
-    if (date.getUTCHours() == 14) {
+    if (ticker == '' || date.getUTCHours() == 14) {
       setRandTicker();
     }
     const url =
