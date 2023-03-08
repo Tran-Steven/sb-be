@@ -7,6 +7,12 @@ import React, { useState } from 'react';
 const [ticker, setTicker] = useState('');
 const tickerJSON = f500ticker;
 
+const worker = new Worker('worker.tsx');
+
+function isMarketOpen() {
+  worker.postMessage('Status');
+}
+isMarketOpen();
 const setRandTicker = function () {
   setTicker(tickerJSON[Random()].Symbol.valueOf());
 };
