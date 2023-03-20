@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 let marketStatus = false;
 let date = new Date();
 let StockData;
@@ -13,7 +13,7 @@ function check() {
 
 function getStockData() {
   if (marketStatus == true) {
-    axios.get("http://localhost:3000/api/stockdata/").then(function (response) {
+    axios.get('/api/stockdata/').then(function (response) {
       StockData = response;
     });
   }
