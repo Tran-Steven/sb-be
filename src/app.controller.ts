@@ -5,12 +5,6 @@ import { StockService } from './app.service';
 export class StockController {
   constructor(private readonly appService: StockService) {}
   @Get()
-  @Render('index')
-  home() {
-    return {};
-  }
-
-  @Get()
   getStockData() {
     return this.appService.getStockData();
   }

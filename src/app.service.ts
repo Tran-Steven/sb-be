@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
-import f500ticker from '../assets/f500ticker.json';
-import Random from '../util/Random';
+import Random from '../../assets/Random';
 import React, { useState } from 'react';
 const [ticker, setTicker] = useState('');
 const tickerJSON = f500ticker;
@@ -30,6 +29,7 @@ export class StockService {
       { ticker } +
       `&apikey=${process.env.STOCK_KEY}`;
     const { data } = await firstValueFrom(this.httpService.get(url));
+    console.log(data);
     return data;
   }
 }

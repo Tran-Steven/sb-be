@@ -8,7 +8,7 @@ function check() {
       return (marketStatus = true);
     }
   }
-  return (marketStatus = false);
+  return (marketStatus = true);
 }
 
 function getStockData() {
